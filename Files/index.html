@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CodeQuest Pro — The System Awaits</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- BACKGROUND PARTICLE CANVAS -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ═══════════════════════════════════════
+NAVBAR
+═══════════════════════════════════════ -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <div class="nav-logo-icon">⚔</div>
+            <div class="nav-logo-text-wrap">
+                <span class="nav-logo-text">CodeQuest<span class="nav-logo-accent">Pro</span></span>
+                <span class="nav-logo-sub">THE SYSTEM</span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#ranks">Ranks</a></li>
+            <li><a href="#leaderboard">Rankings</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="btn-ghost">Log In</button>
+            <button class="btn-primary">Awaken Now →</button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+HERO
+═══════════════════════════════════════ -->
+    <section class="hero">
+
+        <div class="sys-notification">
+            <div class="notif-top-glow"></div>
+            <div class="sys-notif-icon">!</div>
+            <span>System Notification — New Hunter Registration Open</span>
+        </div>
+
+        <p class="hero-eyebrow">[ The System has chosen you ]</p>
+
+        <h1 class="hero-title">
+            <span class="highlight">Level Up</span> your<br /> coding <span class="gold-word">power</span>
+        </h1>
+
+        <p class="hero-sub">
+            We help thousands of companies find elite hunter-level developers, and millions of developers to become one.
+        </p>
+
+        <div class="hero-ctas">
+            <button class="cta-primary">Begin Your Awakening</button>
+            <button class="cta-secondary">For Hunters →</button>
+        </div>
+
+        <!-- STATUS PANEL — Solo Leveling System screen replica -->
+        <div class="status-panel-wrap">
+            <div class="status-panel sys-panel">
+                <div class="crack-overlay"></div>
+                <div class="top-glow"></div>
+                <div class="edge-glow edge-glow--left"></div>
+                <div class="edge-glow edge-glow--right"></div>
+
+                <div class="sp-header">
+                    <div class="sp-title">STATUS</div>
+                </div>
+
+                <div class="sp-level-row">
+                    <div class="sp-level-block">
+                        <div class="sp-level-num" id="sp-level-num">01</div>
+                        <div class="sp-level-label">LEVEL</div>
+                    </div>
+                    <div class="sp-job-info">
+                        <div class="sp-job-line">JOB: <span>None</span></div>
+                        <div class="sp-job-line">TITLE: <span>Awakened Coder</span></div>
+                    </div>
+                </div>
+
+                <div class="sp-bars-row">
+                    <div class="sp-bar-group">
+                        <span class="sp-bar-icon">＋</span>
+                        <div class="sp-bar-track">
+                            <div class="sp-bar-fill hp" id="hp-bar"></div>
+                        </div>
+                        <span class="sp-bar-label">HP</span>
+                        <span class="sp-bar-val">100/100</span>
+                    </div>
+                    <div class="sp-bar-group">
+                        <span class="sp-bar-icon">◈</span>
+                        <div class="sp-bar-track">
+                            <div class="sp-bar-fill mp" id="mp-bar"></div>
+                        </div>
+                        <span class="sp-bar-label">MP</span>
+                        <span class="sp-bar-val">50/50</span>
+                    </div>
+                    <div class="sp-fatigue">FATIGUE: 0</div>
+                </div>
+
+                <div class="sp-stats-grid">
+                    <div class="sp-stat-item">
+                        <span class="sp-stat-icon">⚔</span>
+                        <span class="sp-stat-name">STR:</span>
+                        <span class="sp-stat-val">12</span>
+                    </div>
+                    <div class="sp-stat-item">
+                        <span class="sp-stat-icon">♥</span>
+                        <span class="sp-stat-name">VIT:</span>
+                        <span class="sp-stat-val">8</span>
+                    </div>
+                    <div class="sp-stat-item">
+                        <span class="sp-stat-icon">◈</span>
+                        <span class="sp-stat-name">AGI:</span>
+                        <span class="sp-stat-val">10</span>
+                    </div>
+                    <div class="sp-stat-item">
+                        <span class="sp-stat-icon">◉</span>
+                        <span class="sp-stat-name">INT:</span>
+                        <span class="sp-stat-val">15</span>
+                    </div>
+                    <div class="sp-stat-item">
+                        <span class="sp-stat-icon">◆</span>
+                        <span class="sp-stat-name">PER:</span>
+                        <span class="sp-stat-val">9</span>
+                    </div>
+                    <div class="sp-stat-item sp-ability-pts">
+                        <span class="sp-ap-label">Available<br/>Ability<br/>Points</span>
+                        <span class="sp-ap-val">5</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       TRUSTED BY
+  ═══════════════════════════════════════ -->
+    <section class="trusted-section" id="about">
+        <p class="trusted-label">Trusted by elite hunter guilds worldwide</p>
+        <div class="trusted-logos">
+            <span class="trusted-logo">⊹ Airbnb</span>
+            <span class="trusted-logo">◈ Stripe</span>
+            <span class="trusted-logo">◆ LinkedIn</span>
+            <span class="trusted-logo">⚔ Atlassian</span>
+            <span class="trusted-logo">◉ IBM</span>
+            <span class="trusted-logo">⬡ Snap Inc.</span>
+            <span class="trusted-logo">◈ DoorDash</span>
+            <span class="trusted-logo">◆ Adobe</span>
+            <span class="trusted-logo">⊹ PayPal</span>
+            <span class="trusted-logo">◉ Canva</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       STATS STRIP
+  ═══════════════════════════════════════ -->
+    <div class="stats-strip reveal">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <div class="stat-big">3<span class="suffix gold-accent">M+</span></div>
+                <div class="stat-label">Active Hunters</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-big">15<span class="suffix gold-accent">K+</span></div>
+                <div class="stat-label">Quests Available</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-big">500<span class="suffix gold-accent">+</span></div>
+                <div class="stat-label">Partner Guilds</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-big">S<span class="suffix gold-accent">-Rank</span></div>
+                <div class="stat-label">Top Hunter Class</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+       FEATURES SECTION
+  ═══════════════════════════════════════ -->
+    <section class="features-section" id="features">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">[ System Functions ]</div>
+            <h2 class="section-title">Everything a Hunter needs<br/>to reach S-Rank</h2>
+            <p class="section-sub">The System provides all tools required to awaken, level up, and conquer the coding dungeons.</p>
+        </div>
+
+        <div class="features-grid">
+
+            <!-- Wide card — Code Execution -->
+            <div class="feature-card wide reveal reveal-delay-1">
+                <div class="fc-top"></div>
+                <div class="fc-crack"></div>
+                <div class="fc-body">
+                    <div class="fc-num">01 — EXECUTE</div>
+                    <div class="fc-icon">⌨</div>
+                    <div class="fc-title">Real Code Execution</div>
+                    <div class="fc-desc">JavaScript runs live in the System. Python and C++ simulated with full output. Your solution is evaluated against test cases — no mercy.</div>
+                </div>
+                <div class="fc-visual">
+                    <div class="mock-code">
+                        <span class="code-line"><span class="code-comment">// [SYSTEM] Quest: Two-Sword Technique</span></span>
+                        <span class="code-line"><span class="code-keyword">function </span><span class="code-fn">twoSum</span>(nums, target) {</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="code-keyword">const </span>map = <span class="code-keyword">new </span><span class="code-fn">Map</span>();</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="code-keyword">for </span>(<span class="code-keyword">let </span>i = <span class="code-num">0</span>; i &lt; nums.length; i++) {</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">const </span>comp = target - nums[i];</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if </span>(map.<span class="code-fn">has</span>(comp))</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return </span>[map.<span class="code-fn">get</span>(comp), i];</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;map.<span class="code-fn">set</span>(nums[i], i);</span>
+                        <span class="code-line">&nbsp;&nbsp;}</span>
+                        <span class="code-line">}<span class="code-cursor"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card — XP System -->
+            <div class="feature-card reveal reveal-delay-2">
+                <div class="fc-top"></div>
+                <div class="fc-crack"></div>
+                <div class="fc-num">02 — GROW</div>
+                <div class="fc-icon">⚡</div>
+                <div class="fc-title">XP &amp; Level System</div>
+                <div class="fc-desc">Every cleared quest grants real EXP. Level up from E-Rank to S-Rank. The System tracks every point.</div>
+                <div class="fc-skill-bars">
+                    <div class="mini-stat">
+                        <div class="mini-stat-head"><span>Problem Solving</span><span class="rank-gold">B-Rank</span></div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" style="width:72%"></div>
+                        </div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-stat-head"><span>Algorithm Mastery</span><span class="rank-electric">C-Rank</span></div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" style="width:55%"></div>
+                        </div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-stat-head"><span>Code Speed</span><span class="rank-green">D-Rank</span></div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" style="width:38%"></div>
+                        </div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-stat-head"><span>Logic Power</span><span class="rank-purple">B-Rank</span></div>
+                        <div class="mini-bar">
+                            <div class="mini-bar-fill" style="width:68%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card — Leaderboard -->
+            <div class="feature-card reveal reveal-delay-3" id="leaderboard">
+                <div class="fc-top"></div>
+                <div class="fc-crack"></div>
+                <div class="fc-num">03 — COMPETE</div>
+                <div class="fc-icon">◈</div>
+                <div class="fc-title">Live Leaderboard</div>
+                <div class="fc-desc">Real-time global rankings. Every XP gain reshuffles the board. Rise or fall — the System does not lie.</div>
+            </div>
+
+            <!-- Card — Badges -->
+            <div class="feature-card reveal reveal-delay-4">
+                <div class="fc-top"></div>
+                <div class="fc-crack"></div>
+                <div class="fc-num">04 — COLLECT</div>
+                <div class="fc-icon">✦</div>
+                <div class="fc-title">Achievement Seals</div>
+                <div class="fc-desc">Unlock badges as you hit milestones. From Awakened One to Legendary Hunter — each seal proves your power.</div>
+            </div>
+
+            <!-- Card — Persistence -->
+            <div class="feature-card reveal reveal-delay-5">
+                <div class="fc-top"></div>
+                <div class="fc-crack"></div>
+                <div class="fc-num">05 — PERSIST</div>
+                <div class="fc-icon">◉</div>
+                <div class="fc-title">Progress Saved</div>
+                <div class="fc-desc">The System never forgets. All XP, cleared quests, badges and rank — stored and restored on every return.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       NOTIFICATION CTA PANEL
+  ═══════════════════════════════════════ -->
+    <section class="notif-section" id="notif-section">
+        <div class="sl-notification-panel reveal">
+            <div class="sl-panel-bar top"></div>
+            <div class="sl-panel-bar bottom"></div>
+            <div class="sl-corner tl"></div>
+            <div class="sl-corner tr"></div>
+            <div class="sl-corner bl"></div>
+            <div class="sl-corner br"></div>
+            <div class="sl-notif-content">
+                <div class="sl-notif-header">
+                    <div class="sl-notif-icon-box">!</div>
+                    <div class="sl-notif-title-text">NOTIFICATION</div>
+                </div>
+                <p class="sl-notif-body">
+                    You have been selected for the<br/>
+                    <strong>Hunter Awakening Program</strong>
+                </p>
+                <p class="sl-notif-question">Would you like to begin your journey?</p>
+                <div class="sl-notif-btns">
+                    <button class="sl-btn-yes" id="sl-yes">Yes</button>
+                    <button class="sl-btn-no" id="sl-no">No</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       BENTO GRID
+  ═══════════════════════════════════════ -->
+    <section class="bento-section" id="ranks">
+        <div class="section-header reveal">
+            <div class="section-eyebrow">[ Hunter Classification ]</div>
+            <h2 class="section-title">Your rank awaits,<br/>if you can earn it</h2>
+        </div>
+
+        <div class="bento-grid">
+
+            <div class="bento-card tall reveal reveal-delay-1">
+                <div class="bento-eyebrow">RANK SYSTEM</div>
+                <div class="bento-title">E to S.<br/>Your journey.</div>
+                <div class="bento-desc">Six hunter ranks — each requiring more EXP, more skill, more dedication. The System decides your class.</div>
+                <div class="rank-badges-visual">
+                    <span class="rank-chip e">E-RANK</span>
+                    <span class="rank-chip d">D-RANK</span>
+                    <span class="rank-chip c">C-RANK</span>
+                    <span class="rank-chip b">B-RANK</span>
+                    <span class="rank-chip a">A-RANK</span>
+                    <span class="rank-chip s">S-RANK</span>
+                </div>
+            </div>
+
+            <div class="bento-card wide reveal reveal-delay-2">
+                <div class="bento-eyebrow">EXP SYSTEM</div>
+                <div class="bento-title">Every line of code earns power</div>
+                <div class="bento-desc">Solve quests across JavaScript, Python, and C++. The harder the dungeon, the greater the reward.</div>
+                <div class="bento-xp-visual">
+                    <div class="bxp-row">
+                        <span class="bxp-label">Arrays</span>
+                        <div class="bxp-bar">
+                            <div class="bxp-fill" style="width:90%"></div>
+                        </div>
+                        <span class="bxp-val">90%</span>
+                    </div>
+                    <div class="bxp-row">
+                        <span class="bxp-label">Algorithms</span>
+                        <div class="bxp-bar">
+                            <div class="bxp-fill" style="width:72%"></div>
+                        </div>
+                        <span class="bxp-val">72%</span>
+                    </div>
+                    <div class="bxp-row">
+                        <span class="bxp-label">Data Structs</span>
+                        <div class="bxp-bar">
+                            <div class="bxp-fill" style="width:58%"></div>
+                        </div>
+                        <span class="bxp-val">58%</span>
+                    </div>
+                    <div class="bxp-row">
+                        <span class="bxp-label">Hard Gates</span>
+                        <div class="bxp-bar">
+                            <div class="bxp-fill" style="width:35%"></div>
+                        </div>
+                        <span class="bxp-val">35%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card wide reveal reveal-delay-3">
+                <div class="bento-eyebrow">GLOBAL RANKINGS</div>
+                <div class="bento-title">Top hunters this week</div>
+                <div class="mini-lb">
+                    <div class="mini-lb-row">
+                        <span class="mlb-rank">🥇</span>
+                        <span class="mlb-name">ShadowMonarch_99</span>
+                        <span class="mlb-xp">3,800 XP</span>
+                        <span class="mlb-rank-badge rank-s-badge">S</span>
+                    </div>
+                    <div class="mini-lb-row">
+                        <span class="mlb-rank">🥈</span>
+                        <span class="mlb-name">Jinwoo_Sung</span>
+                        <span class="mlb-xp">2,600 XP</span>
+                        <span class="mlb-rank-badge rank-a-badge">A</span>
+                    </div>
+                    <div class="mini-lb-row">
+                        <span class="mlb-rank">🥉</span>
+                        <span class="mlb-name">NightWalker</span>
+                        <span class="mlb-xp">1,900 XP</span>
+                        <span class="mlb-rank-badge rank-b-badge">B</span>
+                    </div>
+                    <div class="mini-lb-row mini-lb-you">
+                        <span class="mlb-rank mlb-you-rank">—</span>
+                        <span class="mlb-name mlb-you-name">You (New Hunter)</span>
+                        <span class="mlb-xp">0 XP</span>
+                        <span class="mlb-rank-badge rank-e-badge">E</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card reveal reveal-delay-4">
+                <div class="bento-eyebrow">DAILY SYSTEM</div>
+                <div class="bento-title">Daily Quest Board</div>
+                <div class="bento-desc">The System resets quests each day. Complete them to earn bonus EXP and maintain your streak.</div>
+                <div class="daily-quest-list">
+                    <div class="dq-row"><span>Clear 1 Quest</span><span class="dq-xp">+10 XP</span></div>
+                    <div class="dq-row"><span>Clear 3 Quests</span><span class="dq-xp">+30 XP</span></div>
+                    <div class="dq-row"><span>Earn 100 EXP</span><span class="dq-xp">+50 XP</span></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+       FOOTER HERO CTA
+  ═══════════════════════════════════════ -->
+    <div class="footer-hero">
+        <h2 class="fh-title reveal">The System has awakened.<br/>Will you answer?</h2>
+        <p class="fh-sub reveal reveal-delay-1">Millions of hunters have already begun. Your rank is waiting. The dungeons won't clear themselves.</p>
+        <div class="fh-btns reveal reveal-delay-2">
+            <button class="cta-primary">Start a Free Trial</button>
+            <button class="cta-secondary">For Companies →</button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+       FOOTER BAR
+  ═══════════════════════════════════════ -->
+    <footer class="footer-bar">
+        <div class="footer-bar-left">© 2026 CodeQuest Pro. All rights reserved. The System is always watching.</div>
+        <div class="footer-bar-right">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Docs</a>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
