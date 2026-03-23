@@ -104,14 +104,3 @@ This is a student project, but suggestions and improvements are always welcome!
 ## 📜 License
 
 This project is for educational purposes.
-
----
-
-## 👨‍💻 Author
-
-**Azmaan Baig**
-Frontend Developer (in progress 🚀)
-
----
-
-> *"Rise. Grind. Become S-Rank."*
